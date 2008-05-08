@@ -1,0 +1,19 @@
+inherit python
+
+DESCRIPTION="OpenSync library"
+HOMEPAGE="http://www.opensync.org/wiki/"
+SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
+
+abi=1
+PKG_NAMES="${PN} ${PN}${abi} ${PN}-devel python-${PN#lib}"
+PKG_HINTS="setup lib devel python"
+PKG_CONTENTS[0]="usr/bin/*.exe usr/share/"
+PKG_CONTENTS[1]="usr/bin/*-${abi}.dll usr/lib/opensync-*/"
+PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
+PKG_CONTENTS[3]="${PYTHON_SITELIB#/}"
+
+src_compile() {
+	cd ${B}
+	cygcmake -DOPENSYNC_PYTHONBINDINGS=ON
+	cygmake
+}
