@@ -1,6 +1,6 @@
 category: Libs
-requires: cygwin glib2 libiconv2 libsqlite3_0 libxml2
-sdesc: "OpenSync synchronization framework (library)"
+requires: cygwin glib2 libopensync0 libsqlite3_0
+sdesc: "OpenSync synchronization framework (utilities)"
 ldesc: "OpenSync is a synchronization framework that is platform and
 distribution independent. It consists of a powerful sync-engine and
 several plugins that can be used to connect to devices.

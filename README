@@ -8,26 +8,24 @@ OpenSync is very flexible and capable of synchronizing any type of data,
 including contacts, calendar, tasks, notes and files.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.13-1
+  cygwin-1.5.25-11
+  glib2-2.14.6-1
   libiconv2-1.11-1
-  libsqlite3_0-3.3.17-1
-  libxml2-2.6.29-1
+  libsqlite3_0-3.5.6-1
+  libxml2-2.6.32-1
 (python-opensync)
-  python-2.5.1-3
+  python-2.5.2-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
   bison-2.3-1
   cygport-0.3.5-1
-  flex-2.5.33-2
-  gawk-3.1.5-4
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
   sed-4.1.5-2
@@ -36,8 +34,7 @@ Canonical website:
   http://www.opensync.org/
 
 Canonical download:
-  http://www.opensync.org/wiki/download
-  http://dev.gentooexperimental.org/~peper/distfiles/
+  http://www.opensync.org/download/releases/0.22/
 
 -------------------------------------------
 
@@ -52,6 +49,7 @@ This will create:
   /usr/src/libopensync-0.22-X-src.tar.bz2
   /usr/src/libopensync-0.22-X.tar.bz2
   /usr/src/libopensync-devel-0.22-X.tar.bz2
+  /usr/src/libopensync0-0.22-X.tar.bz2
   /usr/src/python-opensync-0.22-X.tar.bz2
 
 -------------------------------------------
@@ -59,14 +57,22 @@ This will create:
 Files included in the binary packages:
 
 (libopensync)
-  /usr/bin/cygopensync-0.dll
-  /usr/bin/cygopensync-xml-0.dll
-  /usr/bin/cygosengine-0.dll
   /usr/bin/osyncbinary.exe
   /usr/bin/osyncdump.exe
   /usr/bin/osyncplugin.exe
   /usr/bin/osyncstress.exe
   /usr/bin/osynctest.exe
+  /usr/share/doc/libopensync-0.22/AUTHORS
+  /usr/share/doc/libopensync-0.22/COPYING
+  /usr/share/doc/libopensync-0.22/INSTALL
+  /usr/share/doc/libopensync-0.22/NEWS
+  /usr/share/doc/libopensync-0.22/README
+  /usr/share/doc/libopensync-0.22/TODO
+
+(libopensync0)
+  /usr/bin/cygopensync-0.dll
+  /usr/bin/cygopensync-xml-0.dll
+  /usr/bin/cygosengine-0.dll
   /usr/lib/opensync/formats/contact.dll
   /usr/lib/opensync/formats/contact.la
   /usr/lib/opensync/formats/data.dll
@@ -92,13 +98,6 @@ Files included in the binary packages:
   /usr/lib/opensync/formats/xmldoc.dll
   /usr/lib/opensync/formats/xmldoc.la
   /usr/lib/opensync/osplugin.exe
-  /usr/share/doc/Cygwin/libopensync-0.22.README
-  /usr/share/doc/libopensync-0.22/AUTHORS
-  /usr/share/doc/libopensync-0.22/COPYING
-  /usr/share/doc/libopensync-0.22/INSTALL
-  /usr/share/doc/libopensync-0.22/NEWS
-  /usr/share/doc/libopensync-0.22/README
-  /usr/share/doc/libopensync-0.22/TODO
 
 (libopensync-devel)
   /usr/include/opensync-1.0/opensync/file.h
@@ -146,6 +145,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.22-2 -----
+Rebuilt.
 
 ----- version 0.22-1 -----
 Initial release for Cygwin.
