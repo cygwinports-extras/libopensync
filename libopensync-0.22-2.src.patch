@@ -1,6 +1,6 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/Makefile.am src/libopensync-0.22/formats/Makefile.am
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/Makefile.am src/libopensync-0.22/formats/Makefile.am
 --- origsrc/libopensync-0.22/formats/Makefile.am	2007-03-27 06:49:27.000000000 -0500
-+++ src/libopensync-0.22/formats/Makefile.am	2007-09-04 00:25:14.968750000 -0500
++++ src/libopensync-0.22/formats/Makefile.am	2008-05-09 16:10:49.968750000 -0500
 @@ -12,27 +12,27 @@
  formats_LTLIBRARIES = data.la event.la todo.la contact.la note.la file.la
  
@@ -41,9 +41,9 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
 +file_la_LIBADD = $(top_builddir)/opensync/libopensync.la @PACKAGE_LIBS@ @LIBS@
  
  SUBDIRS = vformats-xml
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/vformats-xml/Makefile.am src/libopensync-0.22/formats/vformats-xml/Makefile.am
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/vformats-xml/Makefile.am src/libopensync-0.22/formats/vformats-xml/Makefile.am
 --- origsrc/libopensync-0.22/formats/vformats-xml/Makefile.am	2007-03-27 06:49:27.000000000 -0500
-+++ src/libopensync-0.22/formats/vformats-xml/Makefile.am	2007-09-04 00:21:53.203125000 -0500
++++ src/libopensync-0.22/formats/vformats-xml/Makefile.am	2008-05-09 16:10:49.984375000 -0500
 @@ -22,29 +22,29 @@
  lib_LTLIBRARIES =  libopensync-xml.la
  
@@ -88,9 +88,9 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
 -libopensync_xml_la_LIBADD = @PACKAGE_LIBS@ @LIBS@
 +libopensync_xml_la_LDFLAGS = @GCOV_LDFLAGS@ -no-undefined
 +libopensync_xml_la_LIBADD = $(top_builddir)/opensync/libopensync.la @PACKAGE_LIBS@ @XML_LIBS@ @LIBS@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/vformats-xml/vformat.c src/libopensync-0.22/formats/vformats-xml/vformat.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/formats/vformats-xml/vformat.c src/libopensync-0.22/formats/vformats-xml/vformat.c
 --- origsrc/libopensync-0.22/formats/vformats-xml/vformat.c	2007-03-27 06:49:27.000000000 -0500
-+++ src/libopensync-0.22/formats/vformats-xml/vformat.c	2007-09-03 23:44:02.296875000 -0500
++++ src/libopensync-0.22/formats/vformats-xml/vformat.c	2008-05-09 16:10:50.000000000 -0500
 @@ -236,7 +236,7 @@
  	if (charset) {
  
@@ -109,9 +109,9 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
                          if (iconv(cd, (const char**)&inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
  #else
                          if (iconv(cd, &inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/opensync/Makefile.am src/libopensync-0.22/opensync/Makefile.am
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/opensync/Makefile.am src/libopensync-0.22/opensync/Makefile.am
 --- origsrc/libopensync-0.22/opensync/Makefile.am	2007-03-27 06:49:18.000000000 -0500
-+++ src/libopensync-0.22/opensync/Makefile.am	2007-09-03 23:45:34.515625000 -0500
++++ src/libopensync-0.22/opensync/Makefile.am	2008-05-09 16:10:50.000000000 -0500
 @@ -77,5 +77,5 @@
  	*.bbg \
  	*.da
@@ -119,9 +119,9 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
 -libopensync_la_LDFLAGS = @PACKAGE_LIBS@ @GCOV_LDFLAGS@
 +libopensync_la_LDFLAGS = @PACKAGE_LIBS@ @GCOV_LDFLAGS@ -no-undefined
  libopensync_la_LIBADD = @XML_LIBS@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/opensync/opensync_plugin.c src/libopensync-0.22/opensync/opensync_plugin.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/opensync/opensync_plugin.c src/libopensync-0.22/opensync/opensync_plugin.c
 --- origsrc/libopensync-0.22/opensync/opensync_plugin.c	2007-03-27 06:49:18.000000000 -0500
-+++ src/libopensync-0.22/opensync/opensync_plugin.c	2007-09-04 00:15:27.203125000 -0500
++++ src/libopensync-0.22/opensync/opensync_plugin.c	2008-05-09 16:10:50.031250000 -0500
 @@ -370,7 +370,7 @@
  	while ((de = g_dir_read_name(dir))) {
  		filename = g_strdup_printf ("%s/%s", path, de);
@@ -131,9 +131,9 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
  			g_free(filename);
  			continue;
  		}
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/osengine/Makefile.am src/libopensync-0.22/osengine/Makefile.am
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/osengine/Makefile.am src/libopensync-0.22/osengine/Makefile.am
 --- origsrc/libopensync-0.22/osengine/Makefile.am	2007-03-27 06:49:26.000000000 -0500
-+++ src/libopensync-0.22/osengine/Makefile.am	2007-09-03 23:46:01.578125000 -0500
++++ src/libopensync-0.22/osengine/Makefile.am	2008-05-09 16:10:50.031250000 -0500
 @@ -43,5 +43,5 @@
  	*.bbg \
  	*.da
@@ -141,9 +141,93 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -
 -libosengine_la_LDFLAGS = $(PACKAGE_LIBS) -R $(libdir) @GCOV_LDFLAGS@
 +libosengine_la_LDFLAGS = $(PACKAGE_LIBS) -R $(libdir) @GCOV_LDFLAGS@ -no-undefined
  libosengine_la_LIBADD = $(top_builddir)/opensync/libopensync.la
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/wrapper/Makefile.am src/libopensync-0.22/wrapper/Makefile.am
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/tests/mock-plugin/Makefile.am src/libopensync-0.22/tests/mock-plugin/Makefile.am
+--- origsrc/libopensync-0.22/tests/mock-plugin/Makefile.am	2007-03-27 06:49:19.000000000 -0500
++++ src/libopensync-0.22/tests/mock-plugin/Makefile.am	2008-05-09 16:14:00.828125000 -0500
+@@ -14,9 +14,9 @@
+ endif
+ 
+ mock_sync_la_SOURCES = mock_sync.c
+-mock_sync_la_LDFLAGS = -avoid-version -export-dynamic -module @GCOV_LDFLAGS@
+-mock_sync_la_LIBADD = @PACKAGE_LIBS@ @LIBS@
++mock_sync_la_LDFLAGS = -avoid-version -export-dynamic -module -no-undefined @GCOV_LDFLAGS@
++mock_sync_la_LIBADD = $(top_builddir)/opensync/libopensync.la @PACKAGE_LIBS@ @LIBS@
+ 
+ mockformat_la_SOURCES = mock_format.c
+-mockformat_la_LDFLAGS = -avoid-version -export-dynamic -module @GCOV_LDFLAGS@
+-mockformat_la_LIBADD = @PACKAGE_LIBS@ @LIBS@
++mockformat_la_LDFLAGS = -avoid-version -export-dynamic -module -no-undefined @GCOV_LDFLAGS@
++mockformat_la_LIBADD = $(top_builddir)/opensync/libopensync.la @PACKAGE_LIBS@ @LIBS@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/tests/support.c src/libopensync-0.22/tests/support.c
+--- origsrc/libopensync-0.22/tests/support.c	2007-03-27 06:49:26.000000000 -0500
++++ src/libopensync-0.22/tests/support.c	2008-05-09 16:45:19.484375000 -0500
+@@ -38,17 +38,17 @@
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R mock-plugin/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R mock-plugin/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R ../formats/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R ../formats/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R ../formats/vformats-xml/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R ../formats/vformats-xml/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+@@ -476,7 +476,7 @@
+ static void load_format(OSyncEnv *env, const char *name)
+ {
+ 	OSyncError *error = NULL;
+-	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), name);	
++	char *path = g_strdup_printf("%s/%s.%s", g_get_current_dir(), name, G_MODULE_SUFFIX);	
+ 	fail_unless(osync_module_load(env, path, &error), NULL);
+ 	g_free(path);
+ }
+@@ -494,21 +494,21 @@
+ 	fail_unless(osync_env_initialize(osync, &error), NULL);
+ 	fail_unless(!osync_error_is_set(&error), NULL);
+ 	
+-	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), "mock_sync.so");	
++	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), "mock_sync."G_MODULE_SUFFIX);	
+ 	fail_unless(osync_module_load(osync, path, &error), NULL);
+ 	g_free(path);
+ 	
+-	load_format(osync, "contact.so");
+-	load_format(osync, "data.so");
+-	load_format(osync, "event.so");
+-	load_format(osync, "note.so");
+-	load_format(osync, "todo.so");
+-	load_format(osync, "xml-vcal.so");
+-	load_format(osync, "xml-vcard.so");
+-	load_format(osync, "xml-vnote.so");
+-	load_format(osync, "xml-evolution.so");
+-	load_format(osync, "xml-kde.so");
+-	load_format(osync, "mockformat.so");
++	load_format(osync, "contact");
++	load_format(osync, "data");
++	load_format(osync, "event");
++	load_format(osync, "note");
++	load_format(osync, "todo");
++	load_format(osync, "xml-vcal");
++	load_format(osync, "xml-vcard");
++	load_format(osync, "xml-vnote");
++	load_format(osync, "xml-evolution");
++	load_format(osync, "xml-kde");
++	load_format(osync, "mockformat");
+ 	
+ 	return osync;
+ }
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libopensync-0.22/wrapper/Makefile.am src/libopensync-0.22/wrapper/Makefile.am
 --- origsrc/libopensync-0.22/wrapper/Makefile.am	2007-03-27 06:49:09.000000000 -0500
-+++ src/libopensync-0.22/wrapper/Makefile.am	2007-09-03 23:46:40.468750000 -0500
++++ src/libopensync-0.22/wrapper/Makefile.am	2008-05-09 16:10:50.500000000 -0500
 @@ -22,5 +22,5 @@
  endif
  
