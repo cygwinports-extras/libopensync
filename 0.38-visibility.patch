@@ -1,0 +1,33 @@
+--- origsrc/libopensync-0.38/cmake/modules/Compiler.cmake	2008-11-10 09:31:24.000000000 -0600
++++ src/libopensync-0.38/cmake/modules/Compiler.cmake	2009-05-05 13:01:51.765500000 -0500
+@@ -1,11 +1,13 @@
+ # Copyright (c) 2007 Daniel Gollub <dgollub@suse.de>
+ 
+-IF ( WIN32 )
+-	SET( SYMBOLS_VISIBILITY "" )
+-ENDIF ( WIN32 )
++IF ( WIN32 OR CYGWIN )
++	SET( SYMBOLS_VISIBILITY " " )
++ENDIF ( WIN32 OR CYGWIN )
+ 
+ IF ( CMAKE_COMPILER_IS_GNUCC ) 
++IF ( NOT CYGWIN )
+ 	SET( SYMBOLS_VISIBILITY "-fvisibility=hidden" )
++ENDIF ( NOT CYGWIN )
+ 	SET( CMAKE_C_FLAGS_HACKING "-O2 -fmessage-length=0 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -g" CACHE STRING "Developer C Compiler Flags" )
+ 	SET( CMAKE_CXX_FLAGS_HACKING "-O2 -fmessage-length=0 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -g" CACHE STRING "Developer C++ Compiler Flags" )
+ ENDIF ( CMAKE_COMPILER_IS_GNUCC ) 
+--- origsrc/libopensync-0.38/opensync/opensync.h	2008-11-10 09:31:24.000000000 -0600
++++ src/libopensync-0.38/opensync/opensync.h	2009-05-05 12:47:41.937375000 -0500
+@@ -46,7 +46,11 @@
+ 
+ #elif __GNUC__ 
+ #include <unistd.h>
++#ifdef __CYGWIN__
++#define OSYNC_EXPORT __declspec(dllexport)
++#elif __GNUC__ >= 4
+ #define OSYNC_EXPORT __attribute__ ((visibility("default")))
++#endif
+ 
+ #elif __sun 
+ #include <unistd.h>

@@ -1,0 +1,21 @@
+--- origsrc/libopensync-0.38/wrapper/opensync-plugin.i	2008-11-10 09:31:24.000000000 -0600
++++ src/libopensync-0.38/wrapper/opensync-plugin.i	2009-05-05 13:44:52.437375000 -0500
+@@ -373,15 +373,15 @@ typedef struct {} ObjTypeSink;
+ 	}
+ 
+ 	const char *nth_objformat(int nth) {
+-		return osync_objtype_sink_nth_objformat(self, nth);
++		return osync_objtype_sink_nth_objformat_sink(self, nth);
+ 	}
+ 
+ 	void add_objformat(const char *format) {
+-		osync_objtype_sink_add_objformat(self, format);
++		osync_objtype_sink_add_objformat_sink(self, format);
+ 	}
+ 
+ 	void remove_objformat(const char *format) {
+-		osync_objtype_sink_remove_objformat(self, format);
++		osync_objtype_sink_remove_objformat_sink(self, format);
+ 	}
+ 
+ 	/* TODO: set_functions */

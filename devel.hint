@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libopensync glib2-devel libiconv libsqlite3-devel libxml2-devel
+requires: cygwin libopensync0 libglib2.0-devel libiconv libsqlite3-devel libxml2-devel
 external-source: libopensync
 sdesc: "OpenSync synchronization framework (development)"
 ldesc: "OpenSync is a synchronization framework that is platform and

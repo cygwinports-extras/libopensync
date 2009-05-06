@@ -1,0 +1,18 @@
+inherit python
+
+DESCRIPTION="OpenSync library"
+HOMEPAGE="http://www.opensync.org/wiki/"
+SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
+PATCH_URI="0.22-g_module_suffix.patch
+           0.22-iconv.patch
+           0.22-mktemp.patch
+           0.22-no-undefined.patch"
+
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel python-${PN#lib}"
+PKG_HINTS="setup lib devel python"
+libopensync_CONTENTS="usr/bin/*.exe usr/share/doc/"
+libopensync0_CONTENTS="usr/bin/*-0.dll usr/lib/${PN#lib}/"
+libopensync_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
+python_opensync_CONTENTS="${PYTHON_SITELIB#/}"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/opensync --disable-static --disable-debug"

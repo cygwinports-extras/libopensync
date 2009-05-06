@@ -1,5 +1,5 @@
 category: Python
-requires: cygwin glib2 libopensync python
+requires: cygwin libglib2.0_0 libopensync0 python
 external-source: libopensync
 sdesc: "OpenSync synchronization framework (Python bindings)"
 ldesc: "OpenSync is a synchronization framework that is platform and

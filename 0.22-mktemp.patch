@@ -1,0 +1,40 @@
+--- origsrc/libopensync-0.22/tools/osyncplugin.c	2007-03-27 06:49:19.000000000 -0500
++++ src/libopensync-0.22/tools/osyncplugin.c	2009-05-05 14:34:16.796750000 -0500
+@@ -506,7 +506,7 @@ int main (int argc, char *argv[])
+ 	OSyncMember *member = osync_member_new(group);
+ 	
+ 	char *testdir = g_strdup_printf("%s/plgtest.XXXXXX", g_get_tmp_dir());
+-	char *result = mktemp(testdir);
++	char *result = mkdtemp(testdir);
+ 	
+ 	if ((result == NULL) || (mkdir(result, 0700) != 0))
+ 	{
+--- origsrc/libopensync-0.22/tools/osynctest.c	2007-03-27 06:49:19.000000000 -0500
++++ src/libopensync-0.22/tools/osynctest.c	2009-05-05 14:35:06.953000000 -0500
+@@ -130,7 +130,7 @@ double check_sync(OSyncEngine *engine, c
+ 	fflush(stdout);
+ 
+ 	char *tempdir = g_strdup_printf("%s/plgtest.XXXXXX", g_get_tmp_dir());
+-	char *tmpresult = mktemp(tempdir);
++	char *tmpresult = mkdtemp(tempdir);
+ 	if ((tmpresult == NULL) || (mkdir(tmpresult, 0700) != 0))
+ 	{
+ 		g_free(tempdir);
+@@ -455,7 +455,7 @@ int main (int argc, char *argv[])
+ 	}
+ 
+ 	char *testdir = g_strdup_printf("%s/plgtest.XXXXXX", g_get_tmp_dir());
+-	char *result = mktemp(testdir);
++	char *result = mkdtemp(testdir);
+ 
+ 	if ((result == NULL) || (mkdir(result, 0700) != 0))
+ 	{
+@@ -484,7 +484,7 @@ int main (int argc, char *argv[])
+ 	OSyncMember *file = osync_member_new(group);
+ 
+ 	localdir = g_strdup_printf("%s/plgtest.XXXXXX", g_get_tmp_dir());
+-	result = mktemp(testdir);
++	result = mkdtemp(testdir);
+ 
+ 	if ((result == NULL) || (mkdir(result, 0700) != 0))
+ 	{

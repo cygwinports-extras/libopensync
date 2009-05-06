@@ -1,0 +1,77 @@
+--- origsrc/libopensync-0.22/opensync/opensync_plugin.c	2007-03-27 06:49:18.000000000 -0500
++++ src/libopensync-0.22/opensync/opensync_plugin.c	2008-05-09 16:10:50.031250000 -0500
+@@ -370,7 +370,7 @@
+ 	while ((de = g_dir_read_name(dir))) {
+ 		filename = g_strdup_printf ("%s/%s", path, de);
+ 		
+-		if (!g_file_test(filename, G_FILE_TEST_IS_REGULAR) || g_file_test(filename, G_FILE_TEST_IS_SYMLINK) || !g_pattern_match_simple("*.so", filename)) {
++		if (!g_file_test(filename, G_FILE_TEST_IS_REGULAR) || g_file_test(filename, G_FILE_TEST_IS_SYMLINK) || !g_pattern_match_simple("*."G_MODULE_SUFFIX, filename)) {
+ 			g_free(filename);
+ 			continue;
+ 		}
+--- origsrc/libopensync-0.22/tests/support.c	2007-03-27 06:49:26.000000000 -0500
++++ src/libopensync-0.22/tests/support.c	2008-05-09 16:45:19.484375000 -0500
+@@ -38,17 +38,17 @@
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R mock-plugin/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R mock-plugin/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R ../formats/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R ../formats/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+ 	
+-	command = g_strdup_printf("cp -R ../formats/vformats-xml/.libs/*.so %s", testbed);
++	command = g_strdup_printf("cp -R ../formats/vformats-xml/.libs/*.%s %s", G_MODULE_SUFFIX, testbed);
+ 	if (system(command))
+ 		abort();
+ 	g_free(command);
+@@ -476,7 +476,7 @@
+ static void load_format(OSyncEnv *env, const char *name)
+ {
+ 	OSyncError *error = NULL;
+-	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), name);	
++	char *path = g_strdup_printf("%s/%s.%s", g_get_current_dir(), name, G_MODULE_SUFFIX);	
+ 	fail_unless(osync_module_load(env, path, &error), NULL);
+ 	g_free(path);
+ }
+@@ -494,21 +494,21 @@
+ 	fail_unless(osync_env_initialize(osync, &error), NULL);
+ 	fail_unless(!osync_error_is_set(&error), NULL);
+ 	
+-	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), "mock_sync.so");	
++	char *path = g_strdup_printf("%s/%s", g_get_current_dir(), "mock_sync."G_MODULE_SUFFIX);	
+ 	fail_unless(osync_module_load(osync, path, &error), NULL);
+ 	g_free(path);
+ 	
+-	load_format(osync, "contact.so");
+-	load_format(osync, "data.so");
+-	load_format(osync, "event.so");
+-	load_format(osync, "note.so");
+-	load_format(osync, "todo.so");
+-	load_format(osync, "xml-vcal.so");
+-	load_format(osync, "xml-vcard.so");
+-	load_format(osync, "xml-vnote.so");
+-	load_format(osync, "xml-evolution.so");
+-	load_format(osync, "xml-kde.so");
+-	load_format(osync, "mockformat.so");
++	load_format(osync, "contact");
++	load_format(osync, "data");
++	load_format(osync, "event");
++	load_format(osync, "note");
++	load_format(osync, "todo");
++	load_format(osync, "xml-vcal");
++	load_format(osync, "xml-vcard");
++	load_format(osync, "xml-vnote");
++	load_format(osync, "xml-evolution");
++	load_format(osync, "xml-kde");
++	load_format(osync, "mockformat");
+ 	
+ 	return osync;
+ }

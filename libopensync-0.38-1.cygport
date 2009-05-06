@@ -1,0 +1,23 @@
+inherit python cmake
+
+DESCRIPTION="OpenSync library"
+HOMEPAGE="http://www.opensync.org/wiki/"
+SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
+PATCH_URI="0.38-lib-install.patch
+           0.38-python.patch
+           0.38-visibility.patch"
+
+PKG_NAMES="${PN} ${PN}1 ${PN}-devel python-${PN#lib}"
+PKG_HINTS="setup lib devel python"
+libopensync_CONTENTS="usr/bin/osync*.exe usr/share/doc/"
+libopensync1_CONTENTS="usr/bin/cygopensync-1.dll usr/lib/libopensync1/ usr/share/libopensync1/"
+libopensync_devel_CONTENTS='usr/include/ usr/lib/libopensync.dll.a usr/lib/pkgconfig/'
+python_opensync_CONTENTS="${PYTHON_SITELIB#/}"
+
+CYGCMAKE_ARGS="-DOPENSYNC_PYTHONBINDINGS=ON"
+
+src_install() {
+	cd ${B}
+	cyginstall
+	python_optimize
+}
